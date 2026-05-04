@@ -2,7 +2,8 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
-const JWT_SECRET = process.env.JWT_SECRET;
+const JWT_SECRET = process.env.JWT_SECRET || 'default_jwt_secret_key_123456';
+
 
 exports.register = async (req, res) => {
   try {
