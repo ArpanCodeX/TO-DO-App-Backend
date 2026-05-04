@@ -35,10 +35,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/",(req,res)=>{
-  for (let i = 0; i < 1000000000000; i++) {
-    i=+i
-  }
-  res.send(i)
+  res.send("hi")
 } )
 
 // Routes
